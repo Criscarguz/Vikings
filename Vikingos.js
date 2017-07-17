@@ -30,3 +30,22 @@ var Dinosaurios = function (health, strength){
 };
  var dinosaurio1 = new Dinosaurios(totalHealth(5, 25), strength(1,8));
 
+//Entrenamiento
+
+var compradora2 = new Compradoras(selectName,totalHealth (20,100), strength(5, 15));
+var compradora3 = new Compradoras(selectName,totalHealth (20,100), strength(5, 15));
+
+function training (compradora2, compradora3) {
+	while (compradora2.health >=15 && compradora3.health >= 15){
+		 compradora3.health = compradora3.health - compradora2.strength;
+		 compradora2.health = compradora2.health - compradora3.strength;
+  console.log(compradora3.health, compradora2.health);
+	} 	
+	if (compradora2.health > compradora3.health){
+	  console.log (compradora2.name + ' ha resultado victoriosa, gana los zapatos!!');
+	} else { console.log (compradora3.name + ' ha resultado victoriosa, gana los zapatos!!');
+	  
+	}
+
+}
+training(compradora2,compradora3);
